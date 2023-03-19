@@ -1,0 +1,60 @@
+#==================================================
+#==========Welcome ================================
+#==================================================
+
+1- build database
+    1- Student CRUD  done
+        - id pk
+        - name
+        - phone
+        - level
+        - Doctorid (fk)
+        - courseid (fk)
+        - GPA
+        - Age
+
+    2- Doctor CRUD done
+        - id (pk)
+        - name
+        - courseid (fk)
+        - departid(fk)
+        - address
+        - salary
+
+
+    4- Courses done
+        - id(pk)
+        - name
+        - hourse
+
+
+
+    3- Department
+        - id(pk)
+        - name
+
+    5- employee
+        - id(pk)
+        - name
+        - address
+        - age
+        - field (fk)
+        - salary
+
+    6- fields
+        - id(pk)
+        - name
+
+
+==================================
+2- build Desing
+3- connect with php
+==================================
+
+4- authentication  (login)
+5- authrization  
+==================================
+
+5- github
+
+===================================
