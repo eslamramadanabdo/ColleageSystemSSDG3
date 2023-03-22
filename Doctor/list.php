@@ -31,7 +31,12 @@ if(isset($_GET['delete'])){
 ?>
 
 
-
+<?php 
+    if(  ($_SESSION['admin'] == "admin")  ||  ($_SESSION['admin'] == "doctor")  ||  ($_SESSION['admin'] == "employee") ){}
+    else{
+        header("location: /start/admin/login.php");
+    }
+?>
 
 <h1 class="text-center text-info my-3"> List All Doctors </h1>
 <div class="container col-6 my-5">

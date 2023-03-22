@@ -49,10 +49,42 @@
 ==================================
 2- build Desing
 3- connect with php
+4- crud 
+        - insert
+            - frontend
+            - backend
+        -select
+            - backend
+            - front
+
+        - delete
+            - front end 
+            - backend
+
+        - update
+            - frontend 
+            - backend
+            - frontend form
+            - backend
+
 ==================================
 
-4- authentication  (login)
+4- authentication  (login) logout
+        - form data  === (database )
+            - admin
+                    - id
+                    - name
+                    - age 
+                    - username
+                    - password
+                    - role (admin  ,  doctor(subadmin) , employee(subadmin))
+
+                        admin      ===> CRUD(student   , courses , doctors)
+                        doctor     ===> CRUD(student   , courses , doctors(R))
+                        employee   ===> CRUD(Student , course(R) , doctors(R) )
+        
 5- authrization  
+
 ==================================
 
 5- github

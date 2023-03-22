@@ -26,7 +26,13 @@ if (isset($_POST['submit'])) {
 
 ?>
 
+<?php 
 
+    if(  ($_SESSION['admin'] == "admin")  ||  ($_SESSION['admin'] == "doctor")  ||  ($_SESSION['admin'] == "employee") ){}
+    else{
+        header("location: /start/admin/login.php");
+    }
+?>
 
 <h1 class="text-center text-info my-3"> Add New Course </h1>
 <div class="container col-6 my-1" style=" background-color: gray; color: white; ">

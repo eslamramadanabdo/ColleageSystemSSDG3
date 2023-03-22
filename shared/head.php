@@ -1,3 +1,21 @@
+
+<?php
+session_start();
+
+
+if( isset($_POST['logout']) ){
+    session_unset();
+    session_destroy();
+
+    header("location: /start/admin/login.php");
+}
+
+// session_unset();
+// session_destroy();
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,6 +50,9 @@
                         <a class="nav-link" href="/start/index.php">Home </a>
                     </li>
             
+                    <?php 
+                if(  (isset( $_SESSION['admin'])  == "admin") || (isset( $_SESSION['admin'])  == "doctor") || (isset( $_SESSION['admin'])  == "employee") ){ ?>
+
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
                             aria-expanded="false">
@@ -65,11 +86,19 @@
                         </div>
                     </li>
                     
+                    <?php  } ?>
                 </ul>
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                </form>
+
+
+                <?php 
+                if(  (isset( $_SESSION['admin'])  == "admin") || (isset( $_SESSION['admin'])  == "doctor") || (isset( $_SESSION['admin'])  == "employee") ){ ?>
+                    <form class="form-inline my-2 my-lg-0" method="POST" >
+                        <button  name="logout" class="btn btn-outline-danger my-2 my-sm-0" type="submit">Logout</button>
+                    </form>
+                <?php  } else{ ?>
+                    <a href="/start/admin/login.php" class="btn btn-outline-success my-2 my-sm-0" type="submit">Login</a>
+                <?php } ?>
+                
             </div>
         </nav>
     </div>
